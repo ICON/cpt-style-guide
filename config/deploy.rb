@@ -6,7 +6,6 @@ set :releases_directory, "/home/#{fetch(:user)}/#{fetch(:application)}/releases"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :keep_releases, 10
-set :linked_dirs, %w[app/bower_components]
 
 namespace :deploy do
 
