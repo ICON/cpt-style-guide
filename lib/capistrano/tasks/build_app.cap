@@ -1,7 +1,7 @@
 desc 'Build dist folder and generate'
 task :build_app do
   on roles(:all) do
-    execute "cd #{release_path}; npm install bower -g"
+    execute "cd #{release_path}; sudo npm install bower -g"
   end
 end
 
