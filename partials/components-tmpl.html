@@ -1,0 +1,18 @@
+<h1>Components</h1>
+<p>The following components or web elements are currently functional in the CVA interface. Classes for each component and character style are assigned in the Word document, then rendered into markup and Angular functions through the parser. Each component and character style has default CSS in the base template but can be customized with override styles. <a href="docs/PSDocs-Formatting_012814.docx" target="_blank">Click here</a> to download the base template Word document with all of the current components.</p>
+<div class="subsection">
+  <a id="breaks"></a>
+  <h2>Breaks</h2>
+  <p>Breaks function as dividers between different parts of content: chapters or pages.</p>
+  <hr>
+  <h3 id="chapter-breaks" class="subheader">Chapter Breaks</h3>
+  <p>Chapter breaks designate the end of a chapter and the beginning of a new chapter in the manual, which in turn adds a new list item to the TOC.</p>
+  <p class="word"><strong>Docx:</strong> In the Word menu bar, click on <em>Insert</em>, hover on <em>Break</em>, then select <em>Section Break (Next Page)</em>. The next chapter should be titled with an <a href="#a-head">A-Head</a> heading.<br><br>
+  <img src="images/word-chapter-break.png?2" class="screenshot with-shadow"></p>
+  <hr>
+  <h3 id="chapter-breaks" class="subheader">Page Breaks</h3>
+  <p>Page breaks designate the end of a page and the beginning of a new page within a chapter of the manual. Pages are not added to the TOC.</p>
+  <p class="word"><strong>Docx:</strong> In the Word menu bar, click on <em>Insert</em>, hover on <em>Break</em>, then select <em>Page Break</em>. The next page should be titled with a <a href="#b-head">B-Head</a> heading.<br><br>
+  <img src="images/word-page-break.png" class="screenshot with-shadow"></p>
+</div>
+<!-- end breaks -->

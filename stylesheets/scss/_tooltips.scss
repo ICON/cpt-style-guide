@@ -1,0 +1,106 @@
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  padding-left: 5px;
+  display: inline-block;
+  vertical-align: top;
+  > div {
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: none;
+    &.tooltip-text {
+      border-bottom: 1px dotted;
+      padding-left: 5px;
+    }
+  }
+  &:hover, &:active, &:focus, &.is_active {
+    .tooltip-text {
+      border-bottom: 1px solid;
+    }
+  }
+  .ux-icon {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.tooltip-container {
+  @include font-family("sstregular");
+  text-shadow: none;
+  font-size: $font-size-normal;
+  position: absolute;
+  white-space: normal;
+  display: table;
+  top: 100%;
+  left: -1rem;
+  right: auto;
+  margin: 0.75rem 0 0 0;
+  background: $dark-grey;
+  color: $white;
+  z-index: 99;
+  line-height: 100%;
+  width: 500px;
+  @include border-radius(5px);
+  @include transition-property(opacity);
+
+  // arrow
+  &:before {
+    content: '';
+    width: 0;
+    left: 1.5rem;
+    height: 0;
+    bottom: 100%;
+    position: absolute;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid $darker-grey;
+  }
+  span span {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+}
+.tooltip:active, .tooltip:hover {
+  .tooltip-container {
+    opacity: 1;
+  }
+}
+.tooltip-left {
+  .tooltip-container {
+    top: 2rem !important;
+    right: -1rem;
+    left: auto;
+    max-width: none;
+    //move arrow positioning
+    &:before {
+      left: auto;
+      right: 1.5rem;
+    }
+  }
+}
+
+.tooltip-top {
+  .tooltip-container {
+    top: auto !important;
+    bottom: 100%;
+    margin-bottom: 0.75rem; 
+
+    &:before {
+      bottom: auto;
+      border-bottom: none;
+      top: 100%;
+      border-top: 0.5rem solid $darker-grey;
+    }
+  }
+}
+// @media only screen and (min-width:$mobile-large-screen) and (max-width:$small-screen) {
+//   .tooltip-container {
+//     width: 400px;
+//   }
+// }
+// @media only screen and (max-width:$mobile-large-screen) {
+//   .tooltip-container {
+//     width: 300px;
+//   }
+// }

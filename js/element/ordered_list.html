@@ -1,0 +1,6 @@
+<ol class="{{element.identifier}}">
+  <li class='body-head {{element.identifier}}' ng-repeat="list_element in element.elements">
+    <!-- <div ng-include src="elementSrc" ng-repeat="element in list_element.elements"></div> -->
+    <element ng-repeat="element in list_element.elements" element="element" element-type="{{element.type}}"/>
+  </li>
+</ol>

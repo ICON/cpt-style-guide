@@ -1,0 +1,11 @@
+<div class="body-image">
+  <img ng-src="{{ element.asset }}"  ng-show="element.asset" class="{{element.identifier}}"
+		ng-src-responsive="[ 
+			[ 'mobile', element.assetsUrl['mobile'] ],
+			[ 'retina_mobile', element.assetsUrl['retina_mobile'] ],
+			[ 'tablet', element.assetsUrl['tablet'] ],
+			[ 'landscape_tablet', element.assetsUrl['landscape_tablet'] ],
+			[ 'desktop', element.assetsUrl['desktop'] ],
+			[ 'retina_tablet', element.assetsUrl['retina_tablet'] ]
+        ]"/>
+</div>

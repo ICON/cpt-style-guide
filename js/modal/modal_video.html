@@ -1,0 +1,20 @@
+<div class="modal-content">
+  <div videogular vg-loop="true" vg-video-stretch="none">
+    <video class='videoPlayer' preload='metadata'>
+        <source ng-src="{{videoMp4}}" type='video/mp4' />
+        <source ng-src="{{videoWebM}}" type='video/webm'/>
+    </video>
+    <div vg-buffering></div>
+    <div vg-overlayPlay></div>
+    <div vg-controls vg-autohide="false" style="height: 50px;">
+      <div vg-playpauseButton></div>
+      <div class="vg-time-container">
+        <div vg-timeDisplay>{{ currentTime }}</div>
+        <div vg-timeDisplay>{{ totalTime }}</div>
+      </div>
+      <div vg-volume>
+        <div vg-mutebutton></div>
+      </div>
+    </div>
+  </div>
+</div>

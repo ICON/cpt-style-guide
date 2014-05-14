@@ -1,0 +1,29 @@
+@include font-face("sstregular",font-files(
+  "../fonts/sst/sst_regular/sst-roman-webfont.eot",
+  "../fonts/sst/sst_regular/sst-roman-webfont.eot?#iefix",
+  "../fonts/sst/sst_regular/sst-roman-webfont.woff",
+  "../fonts/sst/sst_regular/sst-roman-webfont.ttf",
+  "../fonts/sst/sst_regular/sst-roman-webfont.svg#sstregular"), normal, normal);
+
+@include font-face("sstitalic",font-files(
+  "../fonts/sst/sst_italic/sst-italic-webfont.eot",
+  "../fonts/sst/sst_italic/sst-italic-webfont.eot?#iefix",
+  "../fonts/sst/sst_italic/sst-italic-webfont.woff",
+  "../fonts/sst/sst_italic/sst-italic-webfont.ttf",
+  "../fonts/sst/sst_italic/sst-italic-webfont.svg#sstitalic"), normal, normal);
+
+@include font-face("sstbold",font-files(
+  "../fonts/sst/sst_bold/sst-bold-webfont.eot",
+  "../fonts/sst/sst_bold/sst-bold-webfont.eot?#iefix",
+  "../fonts/sst/sst_bold/sst-bold-webfont.woff",
+  "../fonts/sst/sst_bold/sst-bold-webfont.ttf",
+  "../fonts/sst/sst_bold/sst-bold-webfont.svg#sstbold"), normal, normal);
+
+
+@include font-face("sstbold_italic",font-files(
+  "../fonts/sst/sst_bold_italic/sst-bolditalic-webfont.eot",
+  "../fonts/sst/sst_bold_italic/sst-bolditalic-webfont.eot?#iefix",
+  "../fonts/sst/sst_bold_italic/sst-bolditalic-webfont.woff",
+  "../fonts/sst/sst_bold_italic/sst-bolditalic-webfont.ttf",
+  "../fonts/sst/sst_bold_italic/sst-bolditalic-webfont.svg#sstbold_italic"), normal, normal);
+

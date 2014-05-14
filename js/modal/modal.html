@@ -1,0 +1,11 @@
+<div class="modal-container" ng-show="modalElement" close-keypress-event>
+  <div class="detail-wrapper">
+    <div class="detailbox">
+      <div class="detail-header" ng-click="closeBox()">
+        <span tabindex="0" class="closeicon icon-close" ng-click="closeBox()"></span>
+      </div>
+      <modal-element></modal-element>
+    </div>
+  </div>
+  <div class="hide-modal" ng-click="closeBox()"></div>
+</div>

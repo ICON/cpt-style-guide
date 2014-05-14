@@ -1,0 +1,34 @@
+<h1>Styling</h1>
+<p>Following are common styles used throughout the CPT.</p>
+<hr>
+<a id="header"></a>
+<h2 class="spacer">Headers</h2>
+<p>Most headers are contained within a <code class="tag">div</code> with a class of <code>.header-row</code> that sets a padding of <code class="value">1rem</code> (16px), a top/bottom margin of <code class="value">1rem</code> and a <code class="attr">background-color</code> of <code class="value">#e6e6e6</code></p>
+<p class="subheader">SCSS</p>
+<div hljs language="css">
+  .header-row {
+    background: $light-grey;
+    padding: 1rem;
+    margin: 1rem 0;
+    vertical-align: middle;
+  }
+</div>
+<h3 class="subheader">Page Headers</h3>
+<p>Page headers are <code class="tag">&lt;h1&gt;</code> elements wrapped inside a <code>.header-row</code> and used to display the project name always at the top of the editor.</p>
+<div class="header-row"><h1>Project Name</h1></div>
+<div hljs language="css">
+  .header-row
+    h1
+      | {{project.project_name}}
+</div>
+<h3 class="subheader">Section Headers</h3>
+<p>Section headers are <code class="tag">&lt;h3&gt;</code> elements wrapped inside a <code>.header-row</code> and used to display the titles of each section in the editor (eg. Upload Assets)</p>
+<div class="header-row"><h3>Upload Assets</h3></div>
+<div hljs language="css">
+  .header-row
+    h3
+      | Upload Assets
+</div>
+<h3 class="subheader">Theme Section Headers</h3>
+<p>Headers within theme settings are stand-alone <code class="tag">&lt;h3&gt;</code> elements used to display titles of each theme setting (eg. Chapter Header Background)</p>
+<hr>

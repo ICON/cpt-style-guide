@@ -1,0 +1,182 @@
+<h1>Styling</h1>
+<p>Following are common styles used throughout the CPT.</p>
+<hr>
+<a id="header"></a>
+<h2 class="spacer">Headers</h2>
+<p>Most headers are contained within a <code class="tag">div</code> with a class of <code>.header-row</code> that sets a padding of <code class="value">1rem</code> (16px), a top/bottom margin of <code class="value">1rem</code> and a <code class="attr">background-color</code> of <code class="value">#e6e6e6</code></p>
+<p class="subheader">SCSS</p>
+<div hljs language="css">
+  .header-row {
+    background: $light-grey;
+    padding: 1rem;
+    margin: 1rem 0;
+    vertical-align: middle;
+  }
+</div>
+<a id="page-header"></a>
+<h3 class="subheader">Page Headers</h3>
+<p>Page headers are <code class="tag">&lt;h1&gt;</code> elements wrapped inside a <code>.header-row</code> and used to display the project name always at the top of the editor.</p>
+<p class="subheader">Jade</p>
+<div hljs language="css">
+  .header-row
+    h1
+      | {{project.project_name}}
+</div>
+<p class="subheader">Result</p>
+<div class="header-row"><h1>Project Name</h1></div>
+<a id="section-header"></a>
+<h3 class="subheader">Section Headers</h3>
+<p>Section headers are <code class="tag">&lt;h3&gt;</code> elements wrapped inside a <code>.header-row</code> and used to display the titles of each section in the editor (eg. Upload Assets)</p>
+<p class="subheader">Jade</p>
+<div hljs language="css">
+  .header-row
+    h3
+      | Upload Assets
+</div>
+<p class="subheader">Result</p>
+<div class="header-row"><h3>Upload Assets</h3></div>
+<a id="theme-section-header"></a>
+<h3 class="subheader">Theme Section Headers</h3>
+<p>Headers within theme settings are stand-alone <code class="tag">&lt;h3&gt;</code> elements used to display titles of each theme setting (eg. Chapter Header Background). No container or class name needed.</p>
+<!-- end headers -->
+<hr>
+<a id="spacing"></a>
+<h2 class="spacer">Spacing</h2>
+<p>Custom CSS classes can be added to elements to add left and/or right margins and/or padding. Do not append the these classes to the grid column classes (<code>.col-md-*</code>) or the layout will break.</p>
+<p class="subheader">SCSS</p>
+<div hljs language="scss">
+  // adds a left padding of 5px
+  .pad-lt {
+    padding-left: 5px;
+  }
+  // adds a right padding of 5px
+  .pad-rt {
+    padding-right: 5px;
+  }
+  // adds a left margin of 0.5rem (8px)
+  .mrg-lt {
+    margin-left: 0.5rem;
+  }
+  // adds a right margin of 0.5rem (8px)
+  .mrg-rt {
+    margin-right: 0.5rem;
+  }
+  // adds a bottom margin of 0.5rem (8px)
+  .rowspace {
+    margin-bottom: 1rem;
+  }
+</div>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  .col-md-3
+    button.btn.btn-default.mrg-rt
+      i.fa.fa-pencil.pad-rt
+      | Edit
+</div>
+<!-- end spacing -->
+<hr>
+<a id="alignment"></a>
+<h2 class="spacer">Alignment</h2>
+<p>Use these classes to align your content within the grid system.</p>
+<a id="align"></a>
+<h3 class="subheader">Text-align</h3>
+<p>Custom CSS classes can be added to elements including grid column classes to align text right or center; the default text alignment is always left.</p>
+<p class="subheader">SCSS</p>
+<div hljs language="scss">
+  // aligns text to the right
+  .align-right {
+    text-align: right;
+  }
+  // aligns text center
+  .align-center {
+    text-align: center;
+  }
+</div>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  .col-md-3.align-right
+    p This is right-aligned text
+</div>
+<p class="subheader">Result</p>
+<div class="subsection">
+  <p class="right-justify no-margin">This is right-aligned text</p>
+</div>
+
+<a id="float"></a>
+<h3 class="subheader">Floats</h3>
+<p>Use these native Bootstrap classes to float elements left or right in its parent container.</p>
+<p class="subheader">SCSS</p>
+<div hljs language="css">
+  .pull-left {
+    float: left;
+  }
+  .pull-right {
+    float: right;
+  }
+</div>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  .col-md-3
+    p.pull-right
+      This is a floated div
+</div>
+<p class="subheader">Result</p>
+<div class="subsection">
+  <p class="pull-right">This div is floated right</p>
+</div>
+
+<p>Remember to clear your floats if they are not already contained in a block element. Apply <code>.clearfix</code> to the container of your floated element to clear the floats.</p>
+<div hljs language="css">
+  .clearfix {
+    @include clearfix();
+  }
+</div>
+<!-- end alignment -->
+<hr>
+<a id="buttons"></a>
+<h2 class="spacer">Buttons</h2>
+<p>Each of the seven button styles throughout the framework represent a different action. Most instances of buttons are initiated with the <code class="tag">button</code> tag appended by a class of <code>.btn</code> and button type class <code>.btn-*</code> defined below.</p>
+<div class="row">
+  <div class="columns small-2"><button class="btn btn-default">Default</button></div>
+  <div class="columns small-3"><code>.btn-default</code></div>
+  <div class="columns small-2"><button class="btn btn-primary">Primary</button></div>
+  <div class="columns small-5"><code>.btn-primary</code></div>
+</div>
+<div class="row">
+  <div class="columns small-2"><button class="btn btn-info">Info</button></div>
+  <div class="columns small-3"><code>.btn-info</code></div>
+  <div class="columns small-2"><button class="btn btn-success">Success</button></div>
+  <div class="columns small-5"><code>.btn-success</code></div>
+</div>
+<div class="row">
+  <div class="columns small-2"><button class="btn btn-warning">Warning</button></div>
+  <div class="columns small-3"><code>.btn-warning</code></div>
+  <div class="columns small-2"><button class="btn btn-danger">Danger</button></div>
+  <div class="columns small-5"><code>.btn-danger</code></div>
+</div>
+<div class="row">
+  <div class="columns small-2"><button class="btn btn-inverse">Inverse</button></div>
+  <div class="columns small-10"> <code>.btn-inverse</code></div>
+</div>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  button.btn.btn-primary I'm a primary button
+</div>
+<p class="subheader">Result</p>
+<button class="btn btn-primary">I'm a primary button</button>
+<a id="theme-actions"></a>
+<h3 class="subheader">Theme Actions</h3>
+<p>Action buttons at the bottom of a page are are grouped together in a right-aligned container div with the class of <code>.btn-container</code> nested inside a parent div with the class of <code>.theme-actions</code>.</p>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  .theme-actions
+    .btn-container
+      button.btn.btn-primary Action Button
+</div>
+<p class="subheader">Result</p>
+<div class="theme-actions">
+  <div class="btn-container">
+    <button class="btn btn-primary">Action Button</button>
+  </div>
+</div>
+

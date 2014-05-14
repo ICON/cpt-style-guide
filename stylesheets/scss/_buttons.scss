@@ -1,0 +1,83 @@
+$btn-primary-grad-top: #3da0da;
+$btn-primary-grad-bottom: #1380cf;
+$btn-info-grad-top: #f68547;
+$btn-info-grad-bottom: #ed6216;
+$btn-success-grad-top: #64bf4d;
+$btn-success-grad-bottom: #00a650;
+$btn-warning-grad-top: #f0ad4e;
+$btn-warning-grad-bottom: #e8931b;
+$btn-danger-grad-top: #e62323;
+$btn-danger-grad-bottom: #b30c08;
+$btn-inverse-grad-top: #d2d2d2;
+$btn-inverse-grad-bottom: #828282;
+$btn-container-background: #d7efff;
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid $medium-grey;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  border-bottom-color: darken($medium-grey, 10%);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+  @include border-radius(2px);
+  &.btn-primary {
+    @include buttons($btn-primary-grad-top,$btn-primary-grad-bottom);
+  }
+  &.btn-info {
+    @include buttons($btn-info-grad-top,$btn-info-grad-bottom);
+  }
+  &.btn-success {
+    @include buttons($btn-success-grad-top,$btn-success-grad-bottom);
+  }
+  &.btn-warning {
+    @include buttons($btn-warning-grad-top,$btn-warning-grad-bottom);
+  }
+  &.btn-danger {
+    @include buttons($btn-danger-grad-top,$btn-danger-grad-bottom);
+  }
+  &.btn-inverse {
+    @include buttons($btn-inverse-grad-top,$btn-inverse-grad-bottom);
+  }
+  &.btn-default {
+    color: $darker-grey;
+    background-color: white;
+    border-color: $medium-grey;
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+}
+.theme-actions {
+  @extend .clearfix;
+  background: $btn-container-background;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-top: 1px solid $light-grey;
+  vertical-align: middle;
+  p {
+    float: left;
+  }
+  a, button {
+    border: 0;
+  }
+  [class*="col-md"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.btn-container {
+  @extend .align-right;
+  .btn {
+    margin-left: 0.75rem;
+  }
+  > * {
+    display: inline-block;
+  }
+  .pull-left {
+    margin-left: 0 !important;
+  }
+}

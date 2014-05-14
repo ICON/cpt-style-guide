@@ -1,0 +1,45 @@
+ul.colorblocks {
+  list-style-type: none;
+  @extend .clearfix;
+  li {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    span.square {
+      width: 6rem;
+      height: 6rem;
+      margin: 0 auto;
+      display: block;
+      @include box-shadow($medium-grey 2px 2px 5px);
+      @include border-radius(10px);
+      &.color1 {
+        background: $light-blue;
+      }
+      &.color2 {
+        background: $medium-blue;
+      }
+      &.color3 {
+        background: $dark-blue;
+      }
+      &.color4 {
+        background: $dark-blue2;
+      }
+      &.color5 {
+        background: $yellow;
+      }
+      &.color6 {
+        background: $darker-grey;
+      }
+    }
+  }
+}
+ul.icon-list {
+  width: 100%;
+  li {
+    text-align: left;
+  }
+  .ux-icon {
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+}

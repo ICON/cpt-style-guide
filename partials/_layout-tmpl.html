@@ -1,0 +1,97 @@
+<h1>Layout</h1>
+<!-- <p>There are three main sections to the reader layout: Top Bar, Content Area and Table of Contents. A breakpoint of <code class="no-bg"><span class="value">940px</span></code>, defined in a SCSS variable <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> is set to display the desktop/console or tablet/mobile layouts below.</p> -->
+
+<a id="top-bar"></a>
+<h2 class="spacer">Top Bar</h2>
+<p>The top bar contains the title of the manual and Search, Table of Contents (TOC) and Settings charm icons. The three charm icons on the right of the top bar are Search, TOC and Settings. </p>
+<p>The top bar has a fixed height of <code class="no-bg"><span class="value">50px</span></code> and a horizontal linear gradient background with <code class="no-bg"><span class="attr">$dark-blue</span></code> to <code class="no-bg"><span class="attr">$medium-blue</span></code> color-stops. It is the only section of the CVA that will never have any custom styling.</p>
+<p>On layouts smaller than <code class="no-bg"><span class="value">940px</span></code>, or <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code>, the 'Settings' icon in the top bar is hidden and the settings navigation is combined with the TOC. </p>
+<div class="wireframe-wrapper">
+  <div class="wireframes">
+    <div class="topbar with-gradient">
+      <div><h4><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="The game title goes here.">Title</span></h4></div>
+      <div>
+        <ul>
+          <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Search icon"><span class="icon-search"></span></span></li>
+          <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="TOC icon"><span class="icon-toc"></span></span></li>
+          <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Settings icon"><span class="icon-settings"></span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 class="subheader">Activated Icons</h4>
+<div class="activated-charms">
+  <p class="subheader"><strong>Search</strong></p>
+  <p><img class="with-shadow" src="images/layout-topbar-search.png"></p>
+  <p class="subheader"><strong>Settings: Desktop/Console</strong></p>
+  <p><img src="images/layout-topbar-settings.png"></p>
+  <p class="subheader"><strong>TOC and Settings: Tablet/Mobile</strong></p>
+  <p><img src="images/layout-topbar-breakpoint.png"></p>
+</div>
+<hr>
+
+<a id="toc"></a>
+<h2 class="spacer">Table of Contents (TOC)</h2>
+<p>The Table of Contents, more commonly referred to as the TOC, acts as a navigation between pages of digital manuals. There are three customizable parts to the TOC: background, title and chapters.</p>
+<h4>Desktop/Console:</h4>
+<p>The TOC on layouts larger than <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> is triggered by the <span class="icon-toc"></span> TOC charm in the top bar and displays as an overlay on the right side of the screen.</p>
+<ul class="small-block-grid-2">
+  <li class="centered"><strong>Default</strong><br><img src="images/layout-toc.png"></li>
+  <li class="centered"><strong>Custom</strong><br><img src="images/layout-toc-custom.png"></li>
+</ul>
+<h4>Tablet/Mobile:</h4>
+<p>The TOC on layouts smaller than <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> is triggered by the <span class="icon-menu"></span> "hamburger" menu icon and displays above settings menu in list-view </p>
+<p><img src="images/layout-toc-mobile.png"></p>
+<p>Custom TOCs are easily styled with the following CSS, this example is from an existing version. If your custom styles are being overwritten by the default CSS, add the <code class="no-bg"><span class="value">!important</span></code> rule to the end of the declaration:</p>
+<div hljs language="scss">
+<style>
+.side-toc { //outer wrapper of the TOC
+  background:url('images/exmaple.png'); //set a background image or color to TOC
+}
+.toc-title { //style the title of TOC
+  margin-left: 2.5rem !important;
+  font-family: "SFbold" !important;
+}
+.toc-item { //style li attributes of TOC list
+  font-size: 1.875rem !important;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+  a { //style href attributes
+    margin: 0 0.5rem;
+    padding: 15px;
+    color: $link-color !important;
+    &:hover, &:active, &.is-active { //style href hover/active state attributes
+      background:url('images/example-bg.png') no-repeat 0 0;
+      background-size: 100%;
+      color: $some-color !important;
+      text-shadow: none;
+    }
+  }
+}
+</style>
+</div>
+<hr>
+<!-- end TOC -->
+
+<a id="content-area"></a>
+<h2>Content Area</h2>
+<p>The main content area of the CVA contains all of the manual content. The content area is wrapped in a <code class="no-bg"><span class="tag">div</span></code> with a class of <code class="no-bg"><span class="class">.content-main</span></code> that spans the entire 12-column grid.</p>
+<p><img src="images/content-area.png"></p>
+<h3 id="backgrounds" class="subheader">Backgrounds</h3>
+<p>Custom background colors, <a href="http://www.w3schools.com/cssref/pr_background-image.asp" target="_blank">background-images</a>, borders and <a href="http://www.w3schools.com/cssref/css3_pr_border-image.asp" target="_blank">border-images</a> can be added by adding the following CSS to the theme stylesheet. Backgrounds can be added to the entire page by styling the <code class="no-bg"><span class="tag">body</span></code> tag.</p>
+<div hljs language="scss">
+body { //define background for entire page
+  background:url(images/example-bg.png);
+}
+.content-main {
+  background: rgba(255,255,255,0.8); //define background image or color to content area
+  border-width: 0 20px; //define background border image
+  -moz-border-image:url('images/example-bg.png') 0 20 round;
+  -webkit-border-image:url('images/example-bg.png') 0 20 round;
+  -o-border-image:url('images/example-bg.png') 0 20 round;
+  border-image:url('images/example-bg.png') 0 20 round;
+}
+</div>
+

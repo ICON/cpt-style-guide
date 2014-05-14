@@ -1,0 +1,21 @@
+<div class="{{element.identifier}} inline-video" videogular>
+  <video class='videoPlayer' preload='metadata'>
+
+    <source ng-src="{{element.assets[0].url}}" type="video/mp4">
+    <source ng-src="{{element.assets[1].url}}" type="video/webm">
+    <!--
+     <source ng-repeat='video in element.assets' ng-src='{{ video.url }}' type='{{ video.type }}'>
+     -->
+   </video>
+   <div vg-overlayPlay></div>
+   <div vg-controls vg-autohide="false" style="height: 50px;">
+     <div vg-playpauseButton></div>
+     <div class="vg-time-container">
+       <div vg-timeDisplay>{{ currentTime }}</div>
+       <div vg-timeDisplay>{{ totalTime }}</div>
+     </div>
+     <div vg-volume>
+        <div vg-mutebutton></div>
+     </div>
+   </div>
+ </div>

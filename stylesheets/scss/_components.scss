@@ -1,0 +1,126 @@
+h3.subheader, .subsection {
+  margin-top: 2rem;
+}
+.doc-class {
+  font-family: "sstbold";
+  font-weight: normal !important;
+  background: $light-grey;
+  color: $medium-blue;
+  white-space: nowrap;
+}
+.word {
+  background:url("../images/word-logo.png") no-repeat 0 4px;
+  padding-left: 20px;
+  strong {
+    color: $medium-blue;
+  }
+  .screenshot {
+    width: 60%;
+  }
+}
+.body-control-container {
+  @include clearfix();
+  .body-control {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: $line-height-base;
+    padding: 0;
+    margin: 0 0 18px 0;
+    &:after {
+      content: "..................................................................................................................................................................................................................................................";
+      overflow: hidden;
+      display: block;
+      height: 30px;
+    }
+    dt, dd {
+      white-space: nowrap;
+    }
+  }
+  .body-control-action {
+    float: right;
+    @extend %obp-icons !optional;
+  }
+  .body-control-title {
+    float: left;
+  }
+}
+ul.control-list {
+  width: 100%;
+  li {
+    @extend %obp-icons !optional;
+  }
+}
+.body-table {
+  border: 0;
+  border-collapse: collapse;
+  margin: 0 auto 1rem;
+  width: 100%;
+  tr, th, td {
+    margin: 0;
+    border: 0;
+    vertical-align: top;
+  }
+  tr {
+    padding-top: 1rem;
+    &:nth-child(odd) {
+      padding-bottom: 1rem;
+    }
+    &:nth-child(even) {
+      padding-bottom: 0;
+    }
+  }
+  td {
+    &:nth-child(1) {
+      padding-right: 0.5rem;
+    }
+    &:nth-child(2) {
+      padding-left: 0.5rem; 
+    }
+    p {
+      margin: 0;
+    }
+    h3 {
+      margin: 0;
+    }
+  }
+}
+.doc-table {
+  font-family: "Times New Roman";
+  border: 1px solid black;
+  thead, tr {
+    background: none !important;
+  }
+  td {
+    border: 1px solid black;
+  }
+}
+.icon-align {
+  height: 20px;
+  vertical-align: baseline;
+  margin-right: 5px;
+}
+.body-image, .inline-gif-container {
+  margin-bottom: 1rem;
+  text-align: center;
+  img {
+    border: $border;
+  }
+  &.float-left img {
+    float: left;
+    margin-right: 0.5rem;
+  }
+  &.float-right img {
+    float: right;
+    margin-left: 0.5rem;
+  }
+}
+.clear-image {
+  @extend .clearfix;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width:#{$tablet-screen}) {
+  .word .screenshot {
+    width: 100% !important;
+  }
+}

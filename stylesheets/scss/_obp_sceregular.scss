@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'psdoc-icons';
+  src: url('../fonts/psdoc-icons.eot');
+  src: url('../fonts/psdoc-icons.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/psdoc-icons.woff') format('woff'),
+       url('../fonts/psdoc-icons.ttf') format('truetype'),
+       url('../fonts/psdoc-icons.svg#psdoc-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.psdoc-icons {
+  font-family: "psdoc-icons" !important;
+}

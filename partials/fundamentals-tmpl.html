@@ -1,0 +1,192 @@
+<h1>Fundamentals</h1>
+<p>This is documentation on the Gaming Docs Content Publisher Tool (CPT)</p>
+<hr>
+<!-- end overview -->
+
+<a id="media-queries"></a>
+<h2>Media Queries</h2>
+<p>The CPT is built with the <a href="http://getbootstrap.com/css/" target="blank">Bootstrap</a> framework and includes a responsive 12-column fluid grid layout. The breakpoints below determine which layout styling is rendered in the browser. CSS declarations can be media-specific by wrapping them in the @media syntax:</p>
+<div hljs language="scss">
+@media screen and (media features) and (additional features) {
+  [media specific CSS]
+}
+</div>
+<p><strong>Example:</strong></p>
+<div hljs language="scss">
+  @media only screen and (max-width:1024px) and (min-width:768px) {
+    ...
+  } 
+</div>
+<h4 class="subheader">Breakpoints</h4>
+<div hljs language="scss">
+$mobile-screen: emCalc(320px);
+$mobile-portrait: emCalc(480px);
+$mobile-large-screen: emCalc(560px);
+$small-screen: emCalc(768px);
+$tablet-screen: emCalc(1024px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+$ps4-fullscreen: emCalc(1900px);
+</div>
+<h4 class="subheader">Media Query Rules <small>&#45; variables must be wrapped in '#{$...}'</small></h4>
+<div hljs language="scss">
+$mobile: "only screen and (min-width:'#{$mobile-screen}')";
+$small: "only screen and (min-width:#{$small-screen}))";
+$medium: "only screen and (min-width:#{$medium-screen})";
+$large: "only screen and (min-width:'#{$large-screen}')";
+</div>
+<hr>
+<!-- end media queries -->
+
+<a id="unique-ids"></a>
+<h2>Unique Identifiers</h2>
+<p>Every element in the CVA includes a unique identifier, or slug, assigned in a CSS class. Each class is named by the element type + sequential order of element on the current page, then nested after each parent element and always starting with the chapter.</p>
+<p class="subheader"><strong>Example</strong></p>
+<div hljs language="scss">
+.ch-1-pg-1-bh-1-img-1
+</div>
+</table>
+<p>These unique IDs were introduced as a way to style specific instances of an element type without affecting the rest of its siblings. Use the unique class as a direct or parent selector in any CSS rule.</p>
+<!-- end unique identifiers -->
+<hr>
+
+<a id="default-colors"></a>
+<h2>Default Colors</h2>
+<p>These are the default colors used throughout the base template along with each respective $variable name and #hex color.</p>
+<ul class="colorblocks">
+  <li>
+    <span class="square color1"></span>
+    <code class="no-bg">
+      <span class="attr">$light-blue</span><br />
+      <span class="value">#2c7cf1</span>
+    </code>
+  </li>
+   <li>
+    <span class="square color2"></span>
+    <code class="no-bg">
+      <span class="attr">$medium-blue</span><br />
+      <span class="value">#298fd7</span>
+    </code>
+  </li>
+   <li>
+    <span class="square color3"></span>
+    <code class="no-bg">
+      <span class="attr">$dark-blue</span><br />
+      <span class="value">#202060</span>
+    </code>
+  </li>
+  <li>
+    <span class="square color4"></span>
+    <code class="no-bg">
+      <span class="attr">$dark-blue2</span><br />
+      <span class="value">#142d9c</span>
+    </code>
+  </li>
+   <li>
+    <span class="square color5"></span>
+    <code class="no-bg">
+      <span class="attr">$yellow</span><br />
+      <span class="value">#f5f2a5</span>
+    </code>
+  </li>
+   <li>
+    <span class="square color6"></span>
+    <code class="no-bg">
+      <span class="attr">$dark-grey</span><br />
+      <span class="value">#333333</span>
+    </code>
+  </li>
+</ul>
+<hr>
+<!-- end default colors -->
+
+<a id="type"></a>
+<h2 class="spacer">Type</h2>
+<p>The default font for the CVA is <strong>"SST"</strong>, a non-standard font, and referenced by the <code class="no-bg">@font-face</code> rule. The base font size is <code class="no-bg"><span class="value">16px</span></code> which we use to determine <code class="no-bg"><span class="value">1rem</span></code> (root em) unit. All numerical values should be written in rem units, which are relative to the root or base font size as opposed to em units, which are relative to its parent and can cause compounding issues.</p>
+<p>We currently use four fonts out of the <strong>"SST"</strong> font-set:</p>
+<div hljs language="scss">
+@font-face {
+  font-family: "sstregular";
+  src: "..."; #relative path of font file
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sstitalic";
+  src: "...";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sstbold";
+  src: "...";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sstbold_italic";
+  src: "...";
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "sstregular", Helvetica, Arial, sans-serif;
+}
+</div>
+<p>Default font-size variables based on <code class="no-bg"><span class="value">16px</span></code> base-font-size:</p>
+<div hljs language="scss">
+$font-size-small: 0.875rem; 
+$font-size-normal: 1.15rem;
+$font-size-medium: 1.5rem; 
+$font-size-large: 1.875rem;
+$font-size-larger: 3.25rem;
+</div>
+<p>All text is rendered in the <strong>"SST"</strong> font in the base template, but can be replaced by theme overrides by uploading the font files (in .ttf, .woff, .eot and .svg formats) in the CPT then referencing the font(s) with the above syntax in the custom CSS overrides.</p>
+<!-- end type -->
+
+<a id="icons"></a>
+<h2 class="spacer">Icons</h2>
+<p>There is a custom set of icons rendered as SVG fonts and used throughout the CVA for pagination, expand, video and various other buttons. The font-family name is <strong>"psdoc-icons"</strong> which following CSS assigns to any class name that contains <code class="no-bg"><span class="value">"icon-"</span></code></p>
+<div hljs language="scss">
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "psdoc-icons";
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  display: inline-block;
+}
+</div>
+<p>psdoc-icons used in CVA:</p>
+<ul class="icon-list small-block-grid-2">
+  <li><span class="ux-button square ux-icon icon-expand"></span>
+    <code class="no-bg"><span class="class">.icon-expand</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-video"></span>
+    <code class="no-bg"><span class="class">.icon-video</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-leftArrow"></span>
+    <code class="no-bg"><span class="class">.icon-leftArrow</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-rightArrow"></span>
+    <code class="no-bg"><span class="class">.icon-rightArrow</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-info"></span>
+    <code class="no-bg"><span class="class">.icon-info</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-settings"></span>
+    <code class="no-bg"><span class="class">.icon-settings</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-search"></span>
+    <code class="no-bg"><span class="class">.icon-search</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-toc"></span>
+    <code class="no-bg"><span class="class">.icon-toc</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-close"></span>
+    <code class="no-bg"><span class="class">.icon-close</span></code>
+  </li>
+</ul>
+

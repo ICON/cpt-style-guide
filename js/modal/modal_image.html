@@ -1,0 +1,11 @@
+<div class="modal-content">
+  <img ng-src="{{ element.asset }}"  ng-show="element.asset" class="{{element.identifier}}"
+		ng-src-responsive="[ 
+			[ 'mobile', element.assetsUrl['mobile'] ],
+			[ 'retina_mobile', element.assetsUrl['desktop'] ],
+			[ 'tablet', element.assetsUrl['retina_mobile'] ],
+			[ 'landscape_tablet', element.assetsUrl['landscape_tablet'] ],
+			[ 'desktop', element.assetsUrl['original'] ],
+			[ 'retina_tablet', element.assetsUrl['original'] ]
+        ]" />
+</div>

@@ -1,0 +1,9 @@
+<div class="modal-content">
+  <ul rn-carousel rn-carousel-index="index" rn-carousel-buffered rn-carousel-indicator="true">
+    <li class="rn-carousel-image-container" ng-repeat="carousel in element.elements">
+    	<img class="rn-carousel-image" ng-src="{{carousel.asset}}">
+        <a tabindex="1" class="ux-button square ux-icon carousel-left icon-leftArrow" ng-click="carouselPrevious()"></a>
+        <a tabindex="2" class="ux-button square ux-icon carousel-right icon-rightArrow" ng-click="carouselNext()"></a>
+    </li>
+  </ul>
+</div>

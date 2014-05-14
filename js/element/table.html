@@ -1,0 +1,16 @@
+<table class="body_table {{element.identifier}}" ng-show="element.type=='table'">
+  <thead class="{{table_element.identifier}}" ng-show="table_element.type=='table_head'" ng-repeat="table_element in element.elements">
+    <tr>
+      <th ng-repeat="cell in table_element.elements" class="{{cell.identifier}}">
+        <element ng-repeat="element in cell.elements" element="element" element-type="{{element.type}}"/>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-show="row_element.type=='table_row'" ng-repeat="row_element in element.elements" class="{{row_element.identifier}}">
+      <td data-label="{{element.elements[0].elements[$index].elements[0].content}}" ng-repeat="cell in row_element.elements" class="{{cell.identifier}}">
+        <element ng-repeat="element in cell.elements" element="element" element-type="{{element.type}}"/>
+      </td>
+    </tr>
+  </tbody>
+</table>

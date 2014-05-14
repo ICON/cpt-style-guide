@@ -1,0 +1,112 @@
+$black-transparent: rgba(0,0,0,0.9);
+$zIndex100: 100;
+$modal-overlay-color: $black-transparent;
+$small-screen: emCalc(768px);
+$mobile-large-screen: emCalc(560px);
+$default-float: left;
+
+
+
+%fixed, .fixed {
+  width: 100%;
+  #{$default-float}: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.modal-container {
+  @extend %fixed;
+  background: $modal-overlay-color;
+  left: 0;
+  right: 0;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  min-height: 100%;
+  overflow-y: scroll;
+  z-index: $zIndex100 !important;
+}
+
+.modal-container .grid {
+  @extend .row;
+}
+.image-with-border {
+  position: relative;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+.modal-image-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;  
+  width: 60%;
+  img {
+    width: 100%;
+    border: 1px solid $darker-grey;
+  }
+}
+.modal-content {
+  margin-top: 0 !important;
+  z-index: 0 !important;
+  > p, > span {
+    width: 60%;
+    margin: 2rem auto;
+    display: block;
+  }
+  h3 {
+    @include background-image(linear-gradient($dark-grey, $darkest-grey));
+    border-bottom: 1px solid $darker-grey;
+    color: white;
+    padding: 0.5rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  img {
+    border: $border;
+  }
+}
+.detailbox {
+  color: #fff;
+  height: 100%;
+  overflow: hidden;
+}
+.hide-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+.detail-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.detail-header {
+  background:transparent;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+
+.closeicon {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+table .modal-image-container {
+  width: 100%;
+}
+
+
+@media screen and (max-width:#{$small-screen}) {
+  .modal-image-container, .modal-alpha-base, .inline-gif-container {
+    width: 100% !important;
+  }
+  .modal-content > * {
+    width: 100% !important;
+  }
+}

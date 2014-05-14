@@ -1,0 +1,83 @@
+<h1>General</h1>
+<p>The CPT is built within the <a href="http://getbootstrap.com/css/" target="blank">Bootstrap</a> framework and includes a responsive 12-column fluid grid layout. Custom CSS overrides have modified the look of the default UI; they are documented in this Style Guide.</p>
+<hr>
+<a id="languages"></a>
+<h2 class="spacer">Languages</h2>
+<p>The CPT is built in the <a href="https://angularjs.org/" target="blank">AngularJS</a> framework. Server-side templates are written in the <a href="http://jade-lang.com/">Jade</a> templating engine using a shorthand HTML syntax and nested tags. (Example shown below.)</p>
+<div hljs language="css">
+  .container
+    .row
+      .col-md-6
+        p(class="content")
+          | This is some content
+      .col-md-6
+        img(src="foo-img.jpg")
+</div>
+<hr>
+<a id="grid"></a>
+<h2 class="spacer">Grid</h2>
+<p>Grid systems are used for creating page layouts through a series of rows and columns that contain your content. Here's Bootstrap's explanation on how the grid system works:</p>
+<ul class="subsection">
+  <li>Use rows (<code>.row</code>) to create horizontal groups of columns.</li>
+  <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+  <li>Predefined grid classes like <code>.row</code> and <code>.col-md-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+  <li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>.</li>
+  <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-md-4</code>.</li>
+</ul>
+<p>Learn more about the <a href="http://getbootstrap.com/css/#grid" target="_blank">Bootstrap grid system</a>.</p>
+<p>The CPT layout uses the Stacked-to-Horizontal grid layout by using a single set of columns defined by <code>.col-md-*</code> classes. Columns are aligned horizontally on desktop (medium) devices and stacked on mobile and tablet devices (small to extra-small).</p>
+<div class="codeblock" hljs language="css">
+  .row
+    .col-md-3
+    .col-md-3
+    .col-md-3
+    .col-md-3
+  </div>
+</div>
+<p>The system adds a <code class="value">15px</code> left and right padding to each column to create a "gutter".</p>
+<h3 class="subheader">Media Queries</h3>
+<p>The following media queries' breakpoints determine the grid layout behavior (stacked or horizontal).</p>
+<div class="codeblock" hljs language="scss">
+  // Extra small devices (phones, less than 768px)
+  // No media query since this is the default in Bootstrap
+
+  // Small devices (tablets, 768px and up)
+  @media (min-width: @screen-sm-min) { ... }
+
+  // Medium devices (desktops, 992px and up)
+  @media (min-width: @screen-md-min) { ... }
+
+  // Large devices (large desktops, 1200px and up)
+  @media (min-width: @screen-lg-min) { ... }
+</div>
+<hr>
+<a id="icons"></a>
+<h2 class="spacer">Icons</h2>
+<p>The CPT uses a robust open-source icon library called Font Awesome. 369 scalable vector icons are available by appending a few classes to your markup below. Documentation and full list of icons <a href="http://fontawesome.io/icons/" target="_blank">here</a>.</p>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  button.btn.btn-success
+    i.fa.fa-plus
+      | Add Project
+</div>
+<p class="subheader">Result</p>
+<p><button class="btn btn-success">
+  <i class="fa fa-plus"></i> Add Project
+</button></p>
+<p>Define icon sizes with the following classes:</p>
+<div hljs language="scss">
+  i.fa.fa-star
+  i.fa.fa-star.fa-lg
+  i.fa.fa-star.fa-2x
+  i.fa.fa-star.fa-3x
+  i.fa.fa-star.fa-4x
+  i.fa.fa-star.fa-5x
+</div>
+<div class="subsection">
+  <p><i class="fa fa-star"></i> fa-star default</p>
+  <p><i class="fa fa-star fa-lg"></i> fa-star large</p>
+  <p><i class="fa fa-star fa-2x"></i> fa-star 2x</p>
+  <p><i class="fa fa-star fa-3x"></i> fa-star 3x</p>
+  <p><i class="fa fa-star fa-4x"></i> fa-star 4x</p>
+  <p><i class="fa fa-star fa-5x"></i> fa-star 5x</p>
+</div>

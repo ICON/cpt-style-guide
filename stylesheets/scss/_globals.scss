@@ -1,0 +1,263 @@
+// global styles
+$white: #fff;
+$black: #000;
+$light-grey: #ebebeb;
+$medium-grey: #ccc;
+$dark-grey: #464646;
+$darker-grey: #333;
+$darkest-grey: #222;
+$light-blue: #2c7cf1;
+$medium-blue: #298fd7;
+$dark-blue: #202060;
+$dark-blue2: #142d9c;
+$transparent: rgba(255,255,255,0);
+$black-transparent: rgba(0,0,0,0.9);
+$yellow: #f5f2a5;
+$border: 1px solid $medium-grey;
+
+$mobile-screen: emCalc(320px);
+$mobile-portrait: emCalc(480px);
+$mobile-large-screen: emCalc(560px);
+$small-screen: emCalc(768px);
+$tablet-screen: emCalc(1024px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+$ps4-fullscreen: emCalc(1900px);
+$tab-grad-top: #559eca;
+$tab-grad-bottom: #3482c1;
+
+$border-color: #cccccc;
+$btn-container-background: #d7efff;
+body, html {
+  height: 100%;
+  font-family: $body-font-family;
+  color: $darker-grey;
+}
+#content-container {
+  margin: 3.5rem 0;
+  height: 100%;
+}
+strong {
+  font-family: "sstbold";
+  font-weight: normal !important;
+}
+em, i {
+  font-family: "sstitalic";
+  font-style: normal !important;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: normal !important;
+  color: $darker-grey;
+  letter-spacing: -1px;
+}
+.spacer {
+  margin-top: 2rem;
+}
+ul, ol, dl {
+  margin: 0 0 1rem;
+  list-style-position: inside;
+  &.off-canvas-list {
+    font-size: remCalc(12px) !important;
+  }
+  li {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.heading a {
+      color: #333;
+    }
+  }
+}
+.no-margin {
+  margin-bottom: 0;
+}
+form input {
+  margin: 0 !important;
+}
+code {
+  font-weight: normal;
+  color: #d14;
+  &.string {
+    color: #d14;
+  }
+  &.value, &.class, .hljs-class, .hljs-value {
+    color: #d14;
+  }
+  &.attr {
+    color: #008080;
+  }
+  &.symbol {
+    color: #990073;
+  }
+  &.title, &.tag {
+    color: #000080;
+  }
+  &.block {
+    display: block;
+    background: $light-grey;
+    line-height: 1.3rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    overflow: auto;
+  }
+}
+.codeblock {
+  @include border-radius(5px);
+}
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.sidebar {
+  padding-top: 3.5rem;
+  position: fixed;
+}
+.accordion {
+  margin-top: 1rem;
+  border: $border;
+  dd {
+    border-bottom: $border;
+    &:last-of-type {
+      border-bottom: none !important;
+    }
+  }
+  ul.side-nav {
+    padding: 0 !important;
+  }
+}
+.header-row {
+  background: $light-grey;
+  padding: 1rem;
+  margin: 1rem 0;
+  vertical-align: middle;
+  * {
+    margin: 0;
+  }
+  h1, h3 {
+    color: #4a4a4a;
+    font-weight: bold;
+  }
+}
+.scroll-gradient {
+  @include background-image(linear-gradient(top, $transparent, $white));
+  width: 220px;
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+hr {
+  margin: 2rem 0 !important;
+}
+img {
+  max-width: 100%;
+}
+.small-block-grid-2 {
+  img {
+    margin-top: 0.5rem;
+  }
+}
+.with-shadow {
+  @include box-shadow($medium-grey 5px 5px 10px);
+}
+.subheader {
+  margin-top: 1rem;
+}
+.subsection {
+  @include clearfix;
+  padding: 1.5rem;
+  border: 1px solid $light-grey;
+  margin: 1rem 0;
+  @include border-radius(5px);
+  // /@include box-shadow($medium-grey 1px 1px 5px);
+  p {
+    margin-bottom: 0;
+  }
+}
+.row {
+  margin-bottom: 1rem !important;
+}
+.left-justify {
+  text-align: left;
+}
+.right-justify {
+  text-align: right;
+}
+.top-space {
+  margin-top: 1rem;
+}
+.pad-rt {
+  padding-right: 5px;
+}
+.pad-lt {
+  padding-left: 5px;
+}
+.mrg-lt {
+  margin-left: 0.5rem;
+}
+.mrg-rt {
+  margin-right: 0.5rem;
+}
+.rowspace {
+  margin-bottom: 1rem;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.rowspace {
+  margin-bottom: 1rem;
+}
+// .feature {
+//   border: 1px solid $medium-grey;
+//   @include border-radius(5px);
+//   padding: 2rem;
+// }
+@media only screen and (min-width:#{$medium-screen}) {
+  .sidebar {
+    width: 220px;
+  }
+}
+@media only screen and (min-width:640px) and (max-width:#{$medium-screen}) {
+  .sidebar, .scroll-gradient {
+    width: 200px;
+  }
+}
+// adds gradient to sidebar with media queries
+@media only screen and (max-height:920px) {
+  .accordion .content {
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  #components .scroll-gradient {
+    display: block !important;
+  }
+}
+@media only screen and (max-height:840px) {
+  .accordion .content {
+    max-height: 500px !important;
+  }
+}
+@media only screen and (max-height:760px) {
+  .accordion .content {
+    max-height: 450px !important;
+  }
+}
+@media only screen and (max-height:700px) {
+  .accordion .content {
+    max-height: 400px !important;
+  }
+}

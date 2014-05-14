@@ -1,0 +1,232 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="styleGuideApp">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPT Style Guide - v2.0 Narwhal</title>
+  <link rel="stylesheet" href="stylesheets/app.css" type="text/css" />
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="stylesheets/hljs/github.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+      <nav class="top-bar docs-bar hide-for-small fixed" data-topbar="">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="http://foundation.zurb.com/">CPT Style Guide - v2.0 Narwhal</a></h1>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <!-- <ul class="right">
+            <li class="divider"></li>
+          </ul> -->
+        </section>
+      </nav>
+      <nav class="tab-bar show-for-small">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+        <section class="middle tab-bar-section">
+          <h1 class="title">CPT Style Guide - v2.0 Narwhal</h1>
+        </section>
+      </nav>
+  </div>
+    <!-- mobile menu -->
+  <aside class="left-off-canvas-menu" ng-controller="navCtrl"> 
+    <ul class="off-canvas-list">
+      <!-- <li><label><a href="#fundamentals" ng-click="navSection('fundamentals');">Fundamentals</a></label></li>
+      <li><a ng-click="navSection('fundamentals', 'stylesheets');">Stylesheets</a></li>
+      <li><a ng-click="navSection('fundamentals', 'media-queries');">Media Queries</a></li>
+      <li><a ng-click="navSection('fundamentals', 'unique-ids');">Unique Identifiers</a></li>
+      <li><a ng-click="navSection('fundamentals', 'default-colors');">Default Colors</a></li>
+      <li><a ng-click="navSection('fundamentals', 'type');">Type</a></li>
+      <li><a ng-click="navSection('fundamentals', 'icons');">Icons</a></li> -->
+      
+      <!-- <li><label><a href="#layout" ng-click="navSection('layout');">Layout</a></label></li>
+      <li><a ng-click="navSection('layout', 'top-bar');">Top Bar</a></li>
+      <li><a ng-click="navSection('layout', 'toc');">Table of Contents</a></li>
+      <li><a ng-click="navSection('layout', 'content-area');">Content Area</a>
+        <ul>
+          <li><a ng-click="navSection('layout', 'backgrounds');">Backgrounds</a></li>
+        </ul>
+      </li> -->
+      
+      <li><label><a href="#components" ng-click="navSection('components');">Components</a></label></li>
+      <li><a ng-click="navSection('components', 'headers');">Breaks</a>
+        <ul>
+          <li><a ng-click="navSection('components', 'chapter-break');">Chapter Break</a></li>
+          <li><a ng-click="navSection('components', 'page-break');">Page Break</a></li>
+        </ul>
+      </li>
+      <li><a ng-click="navSection('components', 'headers');">Headers</a>
+       <ul>
+         <li><a ng-click="navSection('components', 'a-head');">A-Head</a></li>
+         <li><a ng-click="navSection('components', 'b-head');">B-Head</a></li>
+         <li><a ng-click="navSection('components', 'body-head');">Body Head</a></li>
+       </ul>
+      </li>
+      <li><a ng-click="navSection('components', 'content');">Content</a>
+        <ul>
+          <li><a ng-click="navSection('components', 'body-normal');">Body Normal</a></li>
+          <li><a ng-click="navSection('components', 'bulleted-list');">Bulleted List</a></li>
+          <li><a ng-click="navSection('components', 'ordered-list');">Ordered List</a></li>
+          <li><a ng-click="navSection('components', 'external-link');">External Link</a></li>
+        </ul>
+      </li>
+      <li><a ng-click="navSection('components', 'control-items');">Control Items</a></li>
+      <li><a ng-click="navSection('components', 'modals');">Modals</a>
+       <ul>
+         <li><a ng-click="navSection('components', 'modal-image');">Modal Image</a></li>
+         <li><a ng-click="navSection('components', 'modal-video');">Modal Video</a></li>
+         <li><a ng-click="navSection('components', 'modal-carousel');">Modal Carousel</a></li>
+         <li><a ng-click="navSection('components', 'modal-trigger');">Modal Trigger</a></li>
+       </ul>
+      </li>
+      <li><a ng-click="navSection('components', 'tooltips');">Tooltips</a></li>
+      <li><a ng-click="navSection('components', 'inline');">Inline</a>
+       <ul>
+         <li><a ng-click="navSection('components', 'inline-image');">Inline Image</a></li>
+         <li><a ng-click="navSection('components', 'inline-video');">Inline Video</a></li>
+      </ul>
+      </li>
+      <li><a ng-click="navSection('components', 'tables');">Table</a></li>
+    </ul>
+  </aside>
+  <a class="exit-off-canvas"></a>
+  <section role="main">
+    <div class="row">
+      <div class="large-3 medium-4 columns hide-for-small">
+        <!-- desktop menu -->
+        <div class="sidebar" ng-controller="navCtrl">
+          <!-- <form>
+            <input tabindex="1" id="autocomplete" type="search" placeholder="Search Docs: e.g. forms" autocomplete="off">
+          </form> -->
+          <nav>
+            <dl class="accordion" data-accordion>
+              <dd>
+                <a href="#general" ng-click="navSection('general');">General</a>
+                <div id="general" class="content">
+                  <ul class="side-nav">
+                    <li><a ng-click="navSection('general', 'languages');">Languages</a></li>
+                    <li><a ng-click="navSection('general', 'grid');">Grid</a></li>
+                  </ul>
+                </div>
+              </dd>
+              <dd>
+                <a href="#styling" ng-click="navSection('styling');">Styling</a>
+                <div id="styling" class="content">
+                  <ul class="side-nav">
+                    <li><a ng-click="navSection('styling', 'headers');">Headers</a>
+                      <ul>
+                        <li><a ng-click="navSection('styling', 'page-header');">Page Header</a></li>
+                        <li><a ng-click="navSection('styling', 'section-header');">Section Header</a></li>
+                        <li><a ng-click="navSection('styling', 'theme-section-header');">Theme Section Header</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('styling', 'spacing');">Spacing</a></li>
+                    <li><a ng-click="navSection('styling', 'alignment');">Alignment</a>
+                      <ul>
+                        <li><a ng-click="navSection('styling', 'text-align');">Text-align</a></li>
+                        <li><a ng-click="navSection('styling', 'floats');">Floats</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('styling', 'buttons');">Buttons</a></li>
+                  </ul>
+                </div>
+              </dd>
+              <!-- <dd>
+                <a href="#components">Components</a>
+                <div id="components" class="content">
+                  <ul class="side-nav">
+                    <li><a ng-click="navSection('components', 'headers');">Breaks</a>
+                      <ul>
+                        <li><a ng-click="navSection('components', 'chapter-break');">Chapter Break</a></li>
+                        <li><a ng-click="navSection('components', 'page-break');">Page Break</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('components', 'headers');">Headers</a>
+                      <ul>
+                        <li><a ng-click="navSection('components', 'a-head');">A-Head</a></li>
+                        <li><a ng-click="navSection('components', 'b-head');">B-Head</a></li>
+                        <li><a ng-click="navSection('components', 'body-head');">Body Head</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('components', 'content');">Content</a>
+                      <ul>
+                        <li><a ng-click="navSection('components', 'body-normal');">Body Normal</a></li>
+                        <li><a ng-click="navSection('components', 'bulleted-list');">Bulleted List</a></li>
+                        <li><a ng-click="navSection('components', 'ordered-list');">Numbered List</a></li>
+                        <li><a ng-click="navSection('components', 'external-link');">External Link</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('components', 'control-items');">Control Items</a></li>
+                    <li><a ng-click="navSection('components', 'modals');">Modals</a>
+                      <ul>
+                        <li><a ng-click="navSection('components', 'modal-image');">Modal Image</a></li>
+                        <li><a ng-click="navSection('components', 'modal-video');">Modal Video</a></li>
+                        <li><a ng-click="navSection('components', 'modal-carousel');">Modal Carousel</a></li>
+                        <li><a ng-click="navSection('components', 'modal-trigger');">Modal Trigger</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('components', 'tooltips');">Tooltips</a></li>
+                    <li><a ng-click="navSection('components', 'inline');">Inline</a>
+                      <ul>
+                        <li><a ng-click="navSection('components', 'inline-image');">Inline Image</a></li>
+                        <li><a ng-click="navSection('components', 'inline-video');">Inline Video</a></li>
+                     </ul>
+                   </li>
+                   <li><a ng-click="navSection('components', 'tables');">Table</a></li>
+                  </ul>
+                  <div class="scroll-gradient"></div>
+                </div>
+              </dd> -->
+            </dl>
+          </nav>
+        </div>
+      </div>
+      <div class="large-9 medium-8 small-12 columns">
+        <div id="content-container">
+          <ng-view></ng-view>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<digireader-modal></digireader-modal>
+
+
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-touch.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-sanitize.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/modal/modal.js"></script>
+<script src="js/element.js"></script>
+<script src="js/element/element.js"></script>
+<script src="js/directives/digireader-dynamic-html.js"></script>
+<script src="js/services/CollectionManager.js"></script>
+<script src="js/components/videogular/videogular.js"></script>
+<script src="js/components/videogular/plugins/buffering.js"></script>
+<script src="js/components/videogular/plugins/controlbar.js"></script>
+<script src="js/components/videogular/plugins/overlayplay.js"></script>
+<script src="js/components/videogular/plugins/poster.js"></script>
+<script src="js/directives/rn-carousel-indicators.js"></script>
+<script src="js/directives/rn-carousel-infinite.js"></script>
+<script src="js/directives/rn-carousel.js"></script>
+<script src="js/components/carousel/angular-carousel.js"></script>
+<script src="js/services/BrowserDetectService.js"></script>
+<script src="js/components/highlight.pack.js"></script>
+<script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+<!-- <script src="js/digireader-modal-trigger.js"></script> -->
+<!-- <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+</body>
+</html>
