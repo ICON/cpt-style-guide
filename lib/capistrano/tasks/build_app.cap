@@ -1,0 +1,9 @@
+desc 'Build dist folder and generate'
+task :build_app do
+  on roles(:all) do
+    execute "cd #{release_path}; bower install"
+    execute "cd #{release_path}; compass compile"
+  end
+end
+
+after "deploy:updated", :build_app
