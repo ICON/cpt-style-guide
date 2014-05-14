@@ -110,7 +110,12 @@
                 <div id="general" class="content">
                   <ul class="side-nav">
                     <li><a ng-click="navSection('general', 'languages');">Languages</a></li>
-                    <li><a ng-click="navSection('general', 'grid');">Grid</a></li>
+                    <li><a ng-click="navSection('general', 'grid');">Grid</a>
+                      <ul>
+                        <li><a ng-click="navSection('general', 'media-queries');">Media Queries</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('general', 'icons');">Icons</a></li>
                   </ul>
                 </div>
               </dd>
@@ -132,7 +137,11 @@
                         <li><a ng-click="navSection('styling', 'floats');">Floats</a></li>
                       </ul>
                     </li>
-                    <li><a ng-click="navSection('styling', 'buttons');">Buttons</a></li>
+                    <li><a ng-click="navSection('styling', 'buttons');">Buttons</a>
+                      <ul>
+                        <li><a ng-click="navSection('styling', 'theme-actions');">Theme Actions</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </div>
               </dd>
@@ -198,7 +207,7 @@
 <digireader-modal></digireader-modal>
 
 
-<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
