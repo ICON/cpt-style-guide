@@ -1,0 +1,31 @@
+$white: #fff;
+$black: #000;
+$light-grey: #ebebeb;
+$medium-grey: #ccc;
+$dark-grey: #464646;
+$darker-grey: #333;
+$darkest-grey: #222;
+$light-blue: #2c7cf1;
+$medium-blue: #298fd7;
+$dark-blue: #202060;
+$dark-blue2: #142d9c;
+$transparent: rgba(255,255,255,0);
+$black-transparent: rgba(0,0,0,0.9);
+$yellow: #f5f2a5;
+$border: 1px solid $medium-grey;
+
+$mobile-screen: emCalc(320px);
+$mobile-portrait: emCalc(480px);
+$mobile-large-screen: emCalc(560px);
+$small-screen: emCalc(768px);
+$tablet-screen: emCalc(1024px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+$ps4-fullscreen: emCalc(1900px);
+$tab-grad-top: #559eca;
+$tab-grad-bottom: #3482c1;
+
+$border-color: #cccccc;
+$btn-container-background: #d7efff;
+$tab-grad-top: #559eca;
+$tab-grad-bottom: #3482c1;
