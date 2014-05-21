@@ -1,3 +1,5 @@
+https://www.codeship.io/projects/45403190-c35e-0131-c592-1a1a7a4b06e9/status
+
 # Foundation Compass Template
 
 The easiest way to get started with Foundation + Compass.
