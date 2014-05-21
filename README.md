@@ -1,4 +1,4 @@
-https://www.codeship.io/projects/45403190-c35e-0131-c592-1a1a7a4b06e9/status
+[ ![Codeship Status for OffBase/cpt-style-guide](https://www.codeship.io/projects/45403190-c35e-0131-c592-1a1a7a4b06e9/status?branch=master)](https://www.codeship.io/projects/21808)
 
 # Foundation Compass Template
 
