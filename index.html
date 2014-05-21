@@ -35,63 +35,38 @@
   </div>
     <!-- mobile menu -->
   <aside class="left-off-canvas-menu" ng-controller="navCtrl"> 
-    <ul class="off-canvas-list">
-      <!-- <li><label><a href="#fundamentals" ng-click="navSection('fundamentals');">Fundamentals</a></label></li>
-      <li><a ng-click="navSection('fundamentals', 'stylesheets');">Stylesheets</a></li>
-      <li><a ng-click="navSection('fundamentals', 'media-queries');">Media Queries</a></li>
-      <li><a ng-click="navSection('fundamentals', 'unique-ids');">Unique Identifiers</a></li>
-      <li><a ng-click="navSection('fundamentals', 'default-colors');">Default Colors</a></li>
-      <li><a ng-click="navSection('fundamentals', 'type');">Type</a></li>
-      <li><a ng-click="navSection('fundamentals', 'icons');">Icons</a></li> -->
-      
-      <!-- <li><label><a href="#layout" ng-click="navSection('layout');">Layout</a></label></li>
-      <li><a ng-click="navSection('layout', 'top-bar');">Top Bar</a></li>
-      <li><a ng-click="navSection('layout', 'toc');">Table of Contents</a></li>
-      <li><a ng-click="navSection('layout', 'content-area');">Content Area</a>
+    <ul class="off-canvas-list">      
+      <li><label><a href="#general" ng-click="navSection('general');">General</a></label></li>
+      <li><a ng-click="navSection('general', 'languages');">Languages</a>
+      <li><a ng-click="navSection('general', 'grid');">Grid</a>
         <ul>
-          <li><a ng-click="navSection('layout', 'backgrounds');">Backgrounds</a></li>
-        </ul>
-      </li> -->
-      
-      <li><label><a href="#components" ng-click="navSection('components');">Components</a></label></li>
-      <li><a ng-click="navSection('components', 'headers');">Breaks</a>
-        <ul>
-          <li><a ng-click="navSection('components', 'chapter-break');">Chapter Break</a></li>
-          <li><a ng-click="navSection('components', 'page-break');">Page Break</a></li>
+          <li><a ng-click="navSection('general', 'media-queries');">Media Queries</a></li>
         </ul>
       </li>
-      <li><a ng-click="navSection('components', 'headers');">Headers</a>
-       <ul>
-         <li><a ng-click="navSection('components', 'a-head');">A-Head</a></li>
-         <li><a ng-click="navSection('components', 'b-head');">B-Head</a></li>
-         <li><a ng-click="navSection('components', 'body-head');">Body Head</a></li>
-       </ul>
-      </li>
-      <li><a ng-click="navSection('components', 'content');">Content</a>
+      <li><a ng-click="navSection('general', 'icons');">Icons</a></li>
+      <!-- end general mobile menu -->
+      <li><label><a href="#styling" ng-click="navSection('styling');">Styling</a></label></li>
+      <li><a ng-click="navSection('styling', 'headers');">Headers</a>
         <ul>
-          <li><a ng-click="navSection('components', 'body-normal');">Body Normal</a></li>
-          <li><a ng-click="navSection('components', 'bulleted-list');">Bulleted List</a></li>
-          <li><a ng-click="navSection('components', 'ordered-list');">Ordered List</a></li>
-          <li><a ng-click="navSection('components', 'external-link');">External Link</a></li>
+          <li><a ng-click="navSection('styling', 'page-header');">Page Header</a></li>
+          <li><a ng-click="navSection('styling', 'section-header');">Section Header</a></li>
+          <li><a ng-click="navSection('styling', 'theme-section-header');">Theme Section Header</a></li>
         </ul>
       </li>
-      <li><a ng-click="navSection('components', 'control-items');">Control Items</a></li>
-      <li><a ng-click="navSection('components', 'modals');">Modals</a>
-       <ul>
-         <li><a ng-click="navSection('components', 'modal-image');">Modal Image</a></li>
-         <li><a ng-click="navSection('components', 'modal-video');">Modal Video</a></li>
-         <li><a ng-click="navSection('components', 'modal-carousel');">Modal Carousel</a></li>
-         <li><a ng-click="navSection('components', 'modal-trigger');">Modal Trigger</a></li>
-       </ul>
+      <li><a ng-click="navSection('styling', 'spacing');">Spacing</a></li>
+      <li><a ng-click="navSection('styling', 'alignment');">Alignment</a>
+        <ul>
+          <li><a ng-click="navSection('styling', 'text-align');">Text-align</a></li>
+          <li><a ng-click="navSection('styling', 'floats');">Floats</a></li>
+        </ul>
       </li>
-      <li><a ng-click="navSection('components', 'tooltips');">Tooltips</a></li>
-      <li><a ng-click="navSection('components', 'inline');">Inline</a>
-       <ul>
-         <li><a ng-click="navSection('components', 'inline-image');">Inline Image</a></li>
-         <li><a ng-click="navSection('components', 'inline-video');">Inline Video</a></li>
-      </ul>
+      <li><a ng-click="navSection('styling', 'buttons');">Buttons</a>
+        <ul>
+          <li><a ng-click="navSection('styling', 'tabs');">Tabs</a></li>
+          <li><a ng-click="navSection('styling', 'button-containers');">Button Containers</a></li>
+          <li><a ng-click="navSection('styling', 'theme-actions');">Theme Actions</a></li>
+        </ul>
       </li>
-      <li><a ng-click="navSection('components', 'tables');">Table</a></li>
     </ul>
   </aside>
   <a class="exit-off-canvas"></a>
@@ -139,8 +114,9 @@
                     </li>
                     <li><a ng-click="navSection('styling', 'buttons');">Buttons</a>
                       <ul>
-                        <li><a ng-click="navSection('styling', 'theme-actions');">Theme Actions</a></li>
                         <li><a ng-click="navSection('styling', 'tabs');">Tabs</a></li>
+                        <li><a ng-click="navSection('styling', 'button-containers');">Button Containers</a></li>
+                        <li><a ng-click="navSection('styling', 'theme-actions');">Theme Actions</a></li>
                       </ul>
                     </li>
                   </ul>
