@@ -1,7 +1,20 @@
 <h1>Styling</h1>
 <p>Following are common styles used throughout the CPT.</p>
 <hr>
-<a id="header"></a>
+<a id="content"></a>
+<h2 class="spacer">Content Area</h2>
+<p>Content areas include forms, accordian panels, <code class="tag">&lt;tbody&gt;</code> and any other block of content and consistently share a light grey <code class="attr">background-color</code> of <code class="value">#f2f2f2</code>. Add a <code>.content-area</code> class to any block element that contains content.</p>
+<p class="subheader">Markup Example</p>
+<div hljs language="css">
+  .content-area
+    p This is some content in a content area.
+</div>
+<p class="subheader">Result</p>
+<div class="content-area">
+  This is some content in a content area.
+</div>
+<hr>
+<a id="headers"></a>
 <h2 class="spacer">Headers</h2>
 <p>Most headers are contained within a <code class="tag">div</code> with a class of <code>.header-row</code> that sets a padding of <code class="value">1rem</code> (16px), a top/bottom margin of <code class="value">1rem</code> and a <code class="attr">background-color</code> of <code class="value">#e6e6e6</code></p>
 <p class="subheader">SCSS</p>
@@ -198,7 +211,7 @@
 <hr>
 <a id="theme-actions"></a>
 <h3 class="subheader">Theme Actions</h3>
-<p>Action buttons grouped at the bottom of a section or page are are grouped together in a <code>.btn-container</code> <code class="tag">div</code> nested inside a <code>.theme-actions</code> div that gives it a <code class="attr">$light-blue</code> <code class="attr">background-color</code>.</p>
+<p>Action buttons grouped at the bottom of a section or page are are grouped together in a <code>.btn-container</code> <code class="tag">div</code> nested inside a <code>.theme-actions</code> div that gives it a <code class="value">$light-blue</code> <code class="attr">background-color</code>.</p>
 <p class="subheader">Markup Example</p>
 <div hljs language="css">
   .theme-actions

@@ -191,6 +191,10 @@ img {
 .rowspace {
   margin-bottom: 1rem;
 }
+.content-area {
+  background-color: $content-background;
+  padding: 1rem;
+}
 // .feature {
 //   border: 1px solid $medium-grey;
 //   @include border-radius(5px);
